@@ -77,27 +77,45 @@ import { COLORS } from '../../lib/colors';
     modal.classList.remove('flex')
   })
  
+function setOriginField() {
+    const form = document.querySelector("form._form_1");
+    if (!form) return false;
+
+    let originInput = form.querySelector('input[name="field[2]"]');
+
+    if (!originInput) {
+      console.log("Origin field[2] not found, creating it.");
+
+      originInput = document.createElement("input");
+      originInput.type = "hidden";
+      originInput.name = "field[2]";
+      form.appendChild(originInput);
+    }
+
+    originInput.value = "qr1";
+
+    console.log("Origin field[2] value:", originInput.value);
+
+    return true;
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     const interval = setInterval(() => {
-const form = document.querySelector("form._form_1");
-      if (form) {
+      if (setOriginField()) {
         clearInterval(interval);
-
-
-const originInput = form.querySelector('input[name="field[2]"]');
-        if (!originInput) {
-          console.log("Origin input not found, creating it.");
-          originInput = document.createElement("input");
-          originInput.type = "hidden";
-          originInput.name = "origin";
-          form.appendChild(originInput);
-        }
-console.log("Setting origin input value to 'qr1'");
-        originInput.value = "qr1";
       }
     }, 300);
   });
 
+  document.addEventListener(
+    "submit",
+    function (event) {
+      if (event.target.matches("form._form_1")) {
+        setOriginField();
+      }
+    },
+    true
+  );
 </script>
 
   <style>
