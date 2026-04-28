@@ -1,5 +1,5 @@
 ---
-import { COLORS } from '../../lib/colors';
+import { COLORS } from '../../../../lib/colors';
 ---
 <!-- <div class="h-full">  
   <div
@@ -21,7 +21,8 @@ import { COLORS } from '../../lib/colors';
     style=`background-color: ${COLORS.secondaryDark}`
   >
       <h1 class="text-3xl md:text-4xl tracking-wide leading-tight font-barlow" style="letter-spacing: 0.1em;">
-        DOWNLOAD YOUR GUIDE NOW!<br />
+        ALMOST THERE!<br />
+        CHECK YOUR INBOX
       </h1>
     </header>
 </div>
@@ -38,37 +39,42 @@ import { COLORS } from '../../lib/colors';
         <div class="mt-0 md:mt-10 md:mt-0 md:w-1/2 flex flex-col md:mx-6">
 
           <p class="text-1xl md:text-2xl leading-tight text-black">
-            Thank you for confirming your email!<br />
+            Your access to the<br />
+            <strong>“Ultimate Canning Success Toolkit”</strong> is<br />
+            pending confirmation.
           </p>
 
           <hr class="my-4 border-[#e5d9c6]" />
 
-           <div class="space-y-6 text-xl md:text-2xl text-black">
+          <div class="space-y-6 text-xl md:text-2xl text-black">
             <div class="flex gap-4">
-              <span class="text-3xl">📥</span>
+              <span class="text-3xl">✉️</span>
               <p>
-                <strong>1. DOWNLOAD YOUR GUIDE</strong><br />
-                <button class="btn mt-4">DOWNLOAD YOUR GUIDE</button>
+                <strong>1. FIND OUR EMAIL</strong><br />
+                <span class="text-lg md:text-xl">(From: GAHEMA EDITIONS)</span>
               </p>
-             </div>
+            </div>
 
             <div class="flex gap-4">
-              <span class="text-3xl">📖</span>
+              <span class="text-3xl">🏷️</span>
               <p>
-                <strong>2. START CANNING WITH CONFIDENCE</strong><br />
-                <span class="text-lg md:text-xl">(Follow our expert tips and recipes)</span>
+                <strong>2. IF NOT IN INBOX, CHECK PROMOTIONS OR SPAM</strong>
               </p>
-             </div>
+            </div>
 
-             <div class="flex gap-4">
-              <span class="text-3xl">⭐</span>
+            <div class="flex gap-4">
+              <span class="text-3xl">👆</span>
               <p>
-                <strong>3. LEAVE A REVIEW!</strong><br />
-                <span class="text-lg md:text-xl">(Your feedback helps us grow and create more resources!)</span>
-                <button class="btn mt-4 font-bold">LEAVE A REVIEW! ⭐</button>
+                <strong>3. CLICK THE CONFIRMATION LINK</strong>
               </p>
-              
-        
+            </div>
+          </div>
+          <div class="mt-10 text-center">
+        <button id="openModal" class="btn">RESEND CONFIRMATION EMAIL<br/>(If needed)</button>
+
+        <p class="mt-4 text-sm md:text-base text-black mb-5">
+          We take privacy seriously. Never share your details. (GDPR Compliant)
+        </p>
       </div>
         </div>
 
