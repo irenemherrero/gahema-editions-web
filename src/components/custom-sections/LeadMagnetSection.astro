@@ -76,6 +76,28 @@ import { COLORS } from '../../lib/colors';
     modal.classList.add('hidden')
     modal.classList.remove('flex')
   })
+ 
+  document.addEventListener("DOMContentLoaded", function () {
+    const interval = setInterval(() => {
+      const form = document.querySelector("._form_1 form");
+
+      if (form) {
+        clearInterval(interval);
+
+        let originInput = form.querySelector('input[name="origin"]');
+
+        if (!originInput) {
+          originInput = document.createElement("input");
+          originInput.type = "hidden";
+          originInput.name = "origin";
+          form.appendChild(originInput);
+        }
+
+        originInput.value = "qr1";
+      }
+    }, 300);
+  });
+
 </script>
 
   <style>
