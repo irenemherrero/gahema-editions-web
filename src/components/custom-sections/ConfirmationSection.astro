@@ -1,0 +1,100 @@
+---
+import { COLORS } from '../../lib/colors';
+---
+<!-- <div class="h-full">  
+  <div
+    class="bg-blue-500 text-white text-center py-6 px-6"
+    style=`background-color: ${COLORS.secondaryDark}`
+  >
+    <h1 class="text-5xl font-barlow mt-3 text-white" style="letter-spacing: 0.1em;">Confirma tu inscripción</h1>
+  </div>
+</div> -->
+
+<div class="h-full">  
+  <div
+    class="bg-blue-500 text-white text-center py-6 px-6"
+    style=`background-color: ${COLORS.secondaryDark}`
+  >    
+    <!-- Header -->
+      <header
+    class="bg-blue-500 text-white text-center py-1 px-6"
+    style=`background-color: ${COLORS.secondaryDark}`
+  >
+      <h1 class="text-3xl md:text-4xl tracking-wide leading-tight font-barlow" style="letter-spacing: 0.1em;">
+        ALMOST THERE!<br />
+        CHECK YOUR INBOX
+      </h1>
+    </header>
+</div>
+    <!-- Content -->
+<div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center">
+     <div class="hidden md:flex mt-10 md:mt-0 md:w-1/2 flex justify-center">
+      <img
+        src="/canning-cover.png"
+        alt="Canning Meat Cookbook Book Cover"
+        class="w-80 md:w-96 shadow-2xl rounded-lg transform hover:scale-105 transition-all opacity-100"
+      />
+    </div>
+
+        <div class="mt-0 md:mt-10 md:mt-0 md:w-1/2 flex flex-col md:mx-6">
+
+          <p class="text-1xl md:text-2xl leading-tight text-black">
+            Your access to the<br />
+            <strong>“Ultimate Canning Success Toolkit”</strong> is<br />
+            pending confirmation.
+          </p>
+
+          <hr class="my-4 border-[#e5d9c6]" />
+
+          <div class="space-y-6 text-xl md:text-2xl text-black">
+            <div class="flex gap-4">
+              <span class="text-3xl">✉️</span>
+              <p>
+                <strong>1. FIND OUR EMAIL</strong><br />
+                <span class="text-lg md:text-xl">(From: GAHEMA EDITIONS)</span>
+              </p>
+            </div>
+
+            <div class="flex gap-4">
+              <span class="text-3xl">🏷️</span>
+              <p>
+                <strong>2. IF NOT IN INBOX, CHECK PROMOTIONS OR SPAM</strong>
+              </p>
+            </div>
+
+            <div class="flex gap-4">
+              <span class="text-3xl">👆</span>
+              <p>
+                <strong>3. CLICK THE CONFIRMATION LINK</strong>
+              </p>
+            </div>
+          </div>
+          <div class="mt-10 text-center">
+        <button id="openModal" class="btn">RESEND CONFIRMATION EMAIL<br/>(If needed)</button>
+
+        <p class="mt-4 text-sm md:text-base text-black mb-5">
+          We take privacy seriously. Never share your details. (GDPR Compliant)
+        </p>
+      </div>
+        </div>
+
+      </div>
+  
+  </section>
+
+  <style>
+    .btn {
+        width: 100%;
+        padding: 14px;
+        background: #d86b2c;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background: #b9561f;
+      }
+  </style>

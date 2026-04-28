@@ -1,0 +1,19 @@
+---
+import LeadMagnetSection from '../../components/custom-sections/LeadMagnetSection.astro';
+import Layout from '../../layouts/Layout.astro';
+
+import { COLORS } from '../../lib/colors';
+---
+
+<Layout>
+  <main>
+    <LeadMagnetSection/>
+  </main>
+  <footer
+    class="bg-blue-600 text-white text-center flex items-center justify-center relative bottom-auto md:fixed md:bottom-0 md:w-full"
+    style=`background-color: ${COLORS.secondaryDark};
+    height: 40px;`
+  >
+    <p>&copy; GAHEMA PRESS. All rights reserved.</p>
+  </footer>
+</Layout>
