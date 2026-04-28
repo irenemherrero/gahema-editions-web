@@ -79,20 +79,21 @@ import { COLORS } from '../../lib/colors';
  
   document.addEventListener("DOMContentLoaded", function () {
     const interval = setInterval(() => {
-      const form = document.querySelector("._form_1 form");
-
+const form = document.querySelector("form._form_1");
       if (form) {
         clearInterval(interval);
+
 
         let originInput = form.querySelector('input[name="origin"]');
 
         if (!originInput) {
+          console.log("Origin input not found, creating it.");
           originInput = document.createElement("input");
           originInput.type = "hidden";
           originInput.name = "origin";
           form.appendChild(originInput);
         }
-
+console.log("Setting origin input value to 'qr1'");
         originInput.value = "qr1";
       }
     }, 300);
