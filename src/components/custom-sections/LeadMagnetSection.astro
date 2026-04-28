@@ -84,8 +84,7 @@ const form = document.querySelector("form._form_1");
         clearInterval(interval);
 
 
-        let originInput = form.querySelector('input[name="origin"]');
-
+const originInput = form.querySelector('input[name="field[2]"]');
         if (!originInput) {
           console.log("Origin input not found, creating it.");
           originInput = document.createElement("input");
