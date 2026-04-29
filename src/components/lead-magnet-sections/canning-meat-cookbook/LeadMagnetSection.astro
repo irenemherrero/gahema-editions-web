@@ -82,7 +82,8 @@ function setOriginField() {
     if (!form) return false;
 
     let originInput = form.querySelector('input[name="field[2]"]');
-
+    const params = new URLSearchParams(window.location.search);
+    
     if (!originInput) {
       console.log("Origin field[2] not found, creating it.");
 
@@ -91,8 +92,9 @@ function setOriginField() {
       originInput.name = "field[2]";
       form.appendChild(originInput);
     }
-
-    originInput.value = "qr1";
+    
+    originInput.value = params.get("origin") || "qr1";
+    // originInput.value = "qr1";
 
     console.log("Origin field[2] value:", originInput.value);
 
@@ -116,6 +118,9 @@ function setOriginField() {
     },
     true
   );
+  window._form_callback = function () {
+    window.location.href = "https://www.gahema-press.com/canning-meat-cookbook/confirmation-page";
+  };
 </script>
 
   <style>
