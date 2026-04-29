@@ -1,14 +1,9 @@
 ---
-import { COLORS } from '../../../../lib/colors';
+import { COLORS } from '../../../lib/colors';
+
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin') || 'qr1';
 ---
-<!-- <div class="h-full">  
-  <div
-    class="bg-blue-500 text-white text-center py-6 px-6"
-    style=`background-color: ${COLORS.secondaryDark}`
-  >
-    <h1 class="text-5xl font-barlow mt-3 text-white" style="letter-spacing: 0.1em;">Confirma tu inscripción</h1>
-  </div>
-</div> -->
 
 <div class="h-full">  
   <div
@@ -38,11 +33,28 @@ import { COLORS } from '../../../../lib/colors';
 
         <div class="mt-0 md:mt-10 md:mt-0 md:w-1/2 flex flex-col md:mx-6">
 
-          <p class="text-1xl md:text-2xl leading-tight text-black">
+          { leadMagnetId === 'qr1' && (
+  <p class="text-1xl md:text-2xl leading-tight text-black">
             Your access to the<br />
             <strong>“Ultimate Canning Success Toolkit”</strong> is<br />
             pending confirmation.
           </p>
+)}
+{ leadMagnetId === 'qr2' && (
+  <p class="text-1xl md:text-2xl leading-tight text-black">
+            Your access to the<br />
+            <strong>“Recetas de salsas”</strong> is<br />
+            pending confirmation.
+          </p>
+)}
+{ leadMagnetId === 'qr3' && (
+  <p class="text-1xl md:text-2xl leading-tight text-black">
+            Your access to the<br />
+            <strong>“Lista de la compra”</strong> is<br />
+            pending confirmation.
+          </p>
+)}
+          
 
           <hr class="my-4 border-[#e5d9c6]" />
 
