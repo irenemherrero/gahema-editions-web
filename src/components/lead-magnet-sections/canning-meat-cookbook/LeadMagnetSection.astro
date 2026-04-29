@@ -1,5 +1,8 @@
 ---
 import { COLORS } from '../../../lib/colors';
+
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin') || 'qr1';
 ---
 <div class="h-full">  <div
     class="bg-blue-500 text-white text-center py-6 px-6"
@@ -20,8 +23,15 @@ import { COLORS } from '../../../lib/colors';
     <!-- RIGHT: CONTENT -->
     <div class="mt-0 md:mt-10 md:mt-0 md:w-1/2 flex flex-col md:mx-6">
       <h2 class="text-5xl font-barlow mt-3 text-white" style=`letter-spacing: 0.1em; color: ${COLORS.secondaryDark}`>UNLOCK YOUR FREE COMPLEMENTARY GUIDE</h2>
-      <h3 class="font-bold mb-4 text-2xl">The Ultimate Canning Success Toolkit</h3>
-
+{ leadMagnetId === 'qr1' && (
+  <h3 class="font-bold mb-4 text-2xl">The Ultimate Canning Success Toolkit</h3>
+)}
+{ leadMagnetId === 'qr2' && (
+  <h3 class="font-bold mb-4 text-2xl">Recetas de salsas</h3>
+)}
+{ leadMagnetId === 'qr3' && (
+  <h3 class="font-bold mb-4 text-2xl">Lista de la compra</h3>
+)}
       <ul class="mb-8">
         <li>✅ MASTER SAFE TIMES (Altitude & Pressure Charts)</li>
         <li>✅ FAST 15-MINUTE RECIPES (Using Your Meat Pantry)</li>
@@ -45,14 +55,15 @@ import { COLORS } from '../../../lib/colors';
    
           <h2 class="text-xl mb-4 font-barlow">Get your free guide</h2>
 
-          <!-- <input
-            type="email"
-            class="border w-full p-4 mb-4"
-            placeholder="Email"
-          />
-
-          <button class="btn w-full mb-2">Submit</button> -->
-          <div class="_form_1"></div><script src="https://gahema.activehosted.com/f/embed.php?id=1" charset="utf-8"></script>
+{ leadMagnetId === 'qr1' && (
+  <div class="_form_1"></div><script src="https://gahema.activehosted.com/f/embed.php?id=1" charset="utf-8"></script>
+)}
+{ leadMagnetId === 'qr2' && (
+  <div class="_form_3"></div><script src="https://gahema.activehosted.com/f/embed.php?id=3" charset="utf-8"></script>
+)}
+{ leadMagnetId === 'qr3' && (
+  <div class="_form_5"></div><script src="https://gahema.activehosted.com/f/embed.php?id=5" charset="utf-8"></script>
+)}
         </div>
       </div>
       <p class="text-center" style="font-size: 12px; margin-top: 10px;">
@@ -77,50 +88,50 @@ import { COLORS } from '../../../lib/colors';
     modal.classList.remove('flex')
   })
  
-function setOriginField() {
-    const form = document.querySelector("form._form_1");
-    if (!form) return false;
+// function setOriginField() {
+//     const form = document.querySelector("form._form_1");
+//     if (!form) return false;
 
-    let originInput = form.querySelector('input[name="field[2]"]');
-    const params = new URLSearchParams(window.location.search);
+//     let originInput = form.querySelector('input[name="field[2]"]');
+//     const params = new URLSearchParams(window.location.search);
     
-    if (!originInput) {
-      console.log("Origin field[2] not found, creating it.");
+//     if (!originInput) {
+//       console.log("Origin field[2] not found, creating it.");
 
-      originInput = document.createElement("input");
-      originInput.type = "hidden";
-      originInput.name = "field[2]";
-      form.appendChild(originInput);
-    }
+//       originInput = document.createElement("input");
+//       originInput.type = "hidden";
+//       originInput.name = "field[2]";
+//       form.appendChild(originInput);
+//     }
     
-    originInput.value = params.get("origin") || "qr1";
-    // originInput.value = "qr1";
+//     originInput.value = params.get("origin") || "qr1";
+//     // originInput.value = "qr1";
 
-    console.log("Origin field[2] value:", originInput.value);
+//     console.log("Origin field[2] value:", originInput.value);
 
-    return true;
-  }
+//     return true;
+//   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const interval = setInterval(() => {
-      if (setOriginField()) {
-        clearInterval(interval);
-      }
-    }, 300);
-  });
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const interval = setInterval(() => {
+//       if (setOriginField()) {
+//         clearInterval(interval);
+//       }
+//     }, 300);
+//   });
 
-  document.addEventListener(
-    "submit",
-    function (event) {
-      if (event.target.matches("form._form_1")) {
-        setOriginField();
-      }
-    },
-    true
-  );
-  window._form_callback = function () {
-    window.location.href = "https://www.gahema-press.com/canning-meat-cookbook/confirmation-page";
-  };
+//   document.addEventListener(
+//     "submit",
+//     function (event) {
+//       if (event.target.matches("form._form_1")) {
+//         setOriginField();
+//       }
+//     },
+//     true
+//   );
+//   window._form_callback = function () {
+//     window.location.href = "https://www.gahema-press.com/canning-meat-cookbook/confirmation-page";
+//   };
 </script>
 
   <style>

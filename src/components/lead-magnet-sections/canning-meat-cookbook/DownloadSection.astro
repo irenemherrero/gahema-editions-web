@@ -1,14 +1,9 @@
 ---
 import { COLORS } from '../../../lib/colors';
+
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin') || 'qr1';
 ---
-<!-- <div class="h-full">  
-  <div
-    class="bg-blue-500 text-white text-center py-6 px-6"
-    style=`background-color: ${COLORS.secondaryDark}`
-  >
-    <h1 class="text-5xl font-barlow mt-3 text-white" style="letter-spacing: 0.1em;">Confirma tu inscripción</h1>
-  </div>
-</div> -->
 
 <div class="h-full">  
   <div
@@ -23,6 +18,21 @@ import { COLORS } from '../../../lib/colors';
       <h1 class="text-3xl md:text-4xl tracking-wide leading-tight font-barlow" style="letter-spacing: 0.1em;">
         DOWNLOAD YOUR GUIDE NOW!<br />
       </h1>
+      { leadMagnetId === 'qr1' && (
+  <h1 class="text-3xl md:text-4xl tracking-wide leading-tight font-barlow" style="letter-spacing: 0.1em;">
+        DOWNLOAD YOUR GUIDE NOW!<br />
+      </h1>
+)}
+{ leadMagnetId === 'qr2' && (
+  <h1 class="text-3xl md:text-4xl tracking-wide leading-tight font-barlow" style="letter-spacing: 0.1em;">
+        DOWNLOAD TUS SALSAS NOW!<br />
+      </h1>
+)}
+{ leadMagnetId === 'qr3' && (
+  <h1 class="text-3xl md:text-4xl tracking-wide leading-tight font-barlow" style="letter-spacing: 0.1em;">
+        DOWNLOAD TU LISTA DE LA COMPRA NOW!<br />
+      </h1>
+)}
     </header>
 </div>
     <!-- Content -->
