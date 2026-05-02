@@ -1,13 +1,14 @@
 ---
-import DownloadSection from '../../components/lead-magnet-sections/canning-meat-cookbook/DownloadSection.astro';
+import DownloadSection from '../../components/lead-magnet-sections/canning-meat-cookbook/DownloadPage/DownloadSection.astro';
 import Layout from '../../layouts/Layout.astro';
 
-import { COLORS } from '../../lib/colors';
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin') || 'qr1';
 
 ---
 
 <Layout>
   <main>
-    <DownloadSection/>
+    <DownloadSection leadMagnetId={leadMagnetId} />
   </main>
 </Layout>

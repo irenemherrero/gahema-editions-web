@@ -1,0 +1,93 @@
+---
+
+import "./styles.css";
+
+const bonuses = {
+  qr1: {
+    title: "Canning Meat Checklist Pack",
+    description:
+      "Your two printable checklists are ready. Keep them next to you during your first canning session.",
+    downloadUrl: "/downloads/canning-meat-checklist-pack.docx",
+  },
+  qr2: {
+    title: "10 Sauces for Canned Meat Guide",
+    description:
+      "Your sauce guide is ready. Use it to turn your canned meat into quick, flavorful meals in 25 minutes or less.",
+    downloadUrl: "/downloads/10-sauces-for-canned-meat.pdf",
+  },
+};
+const { leadMagnetId } = Astro.props;
+const bonusKey = leadMagnetId
+const bonus = bonuses[bonusKey] ?? bonuses.checklist;
+---
+
+<main class="download-page">
+  <header class="download-topbar">
+    <p>Your guide is ready</p>
+    <h1>Download Your Free Bonus</h1>
+  </header>
+
+  <section class="download-section">
+    <div class="download-inner">
+      <div class="download-image">
+        <img
+          src="/canning-cover.png"
+          alt="Canning Meat Cookbook for Beginners"
+        />
+      </div>
+
+      <div class="download-content">
+        <p class="eyebrow">Thank you for confirming your email</p>
+
+        <h2>{bonus.title}</h2>
+
+        <p class="download-description">
+          {bonus.description}
+        </p>
+
+        <a href={bonus.downloadUrl} class="button download-button" download>
+          Download Your Guide
+        </a>
+
+        <div class="download-steps">
+          <div class="download-step">
+            <span>1</span>
+            <div>
+              <h3>Save it somewhere easy to find</h3>
+              <p>Your kitchen, tablet, or recipe folder is perfect.</p>
+            </div>
+          </div>
+
+          <div class="download-step">
+            <span>2</span>
+            <div>
+              <h3>Use it with the cookbook</h3>
+              <p>This bonus is designed to complement the recipes and methods in your book.</p>
+            </div>
+          </div>
+
+          <div class="download-step">
+            <span>3</span>
+            <div>
+              <h3>Enjoying the book?</h3>
+              <p>Your review helps more beginners discover safe, simple meat canning.</p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="YOUR_REVIEW_LINK_HERE"
+          class="review-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Leave a Review
+        </a>
+
+        <p class="privacy">
+          Thank you for being part of the GAHEMA PRESS reader community.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
