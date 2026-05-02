@@ -3,7 +3,7 @@ import ConfirmationSection from '../../components/lead-magnet-sections/canning-m
 import Layout from '../../layouts/Layout.astro';
 
 const { searchParams } = Astro.url;
-const leadMagnetId = searchParams.get('origin') || 'qr1';
+const leadMagnetId = searchParams.get('origin');
 ---
 
 <Layout>
