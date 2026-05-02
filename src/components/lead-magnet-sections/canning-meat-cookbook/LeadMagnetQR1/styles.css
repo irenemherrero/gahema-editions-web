@@ -317,6 +317,10 @@
       gap: 40px;
       text-align: center;
     }
+    .hero__image {
+    display: flex;
+    justify-content: center;
+  }
 
     .hero__image img {
       max-width: 320px;
