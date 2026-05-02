@@ -1,5 +1,7 @@
 ---
 import LeadMagnetQR1 from '../../components/lead-magnet-sections/canning-meat-cookbook/LeadMagnetQR1/LeadMagnetQR1.astro';
+import LeadMagnetQR2 from '../../components/lead-magnet-sections/canning-meat-cookbook/LeadMagnetQR2/LeadMagnetQR2.astro';
+
 import Layout from '../../layouts/Layout.astro';
 
 const { searchParams } = Astro.url;
@@ -9,6 +11,7 @@ const leadMagnetId = searchParams.get('origin') || 'qr1';
 
 <Layout>
   <main>
-    {leadMagnetId === "qr1" && <LeadMagnetQR1 leadMagnetId={leadMagnetId} />}
+    {leadMagnetId === "qr1" && <LeadMagnetQR1 />}
+    {leadMagnetId === "qr2" && <LeadMagnetQR2 />}
   </main>
 </Layout>

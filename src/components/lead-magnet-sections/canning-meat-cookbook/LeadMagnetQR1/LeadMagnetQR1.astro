@@ -1,5 +1,5 @@
 ---
-import "./styles.css";
+import "../styles.css";
 ---
 
 <main class="landing">
@@ -44,7 +44,7 @@ import "./styles.css";
         >
           <div class="m-2 bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full">
             <div class="flex justify-between items-start">
-              <h2 style="padding-top: 40px">Get your free guide</h2>
+              <h2 style="padding-top: 40px">Get your Free Checklist Pack</h2>
 
               <button
                 id="closeModal"
@@ -187,19 +187,31 @@ import "./styles.css";
 </main>
 
 <script>
-  const modal = document.getElementById('modal');
-  const openBtns = document.querySelectorAll('.openModal');
-  const closeBtn = document.getElementById('closeModal');
+  const modal = document.getElementById("modal");
+  const openBtns = document.querySelectorAll(".openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
 
   openBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    });
+    btn.addEventListener("click", openModal);
   });
 
-  closeBtn.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
   });
 </script>
