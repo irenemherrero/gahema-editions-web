@@ -1,11 +1,13 @@
 ---
-import ConfirmationSection from '../../components/lead-magnet-sections/canning-meat-cookbook/ConfirmationSection.astro';
+import ConfirmationSection from '../../components/lead-magnet-sections/canning-meat-cookbook/ConfirmationPage/ConfirmationSection.astro';
 import Layout from '../../layouts/Layout.astro';
 
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin') || 'qr1';
 ---
 
 <Layout>
   <main>
-    <ConfirmationSection/>
+    <ConfirmationSection leadMagnetId={leadMagnetId} />
   </main>
 </Layout>
