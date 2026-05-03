@@ -289,7 +289,9 @@ h2 {
 ========================= */
 
 .book-categories {
+  display: grid;
   grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
 }
 
 .book-categories > div {
@@ -303,6 +305,32 @@ h2 {
 .book-categories > div:nth-child(5) {
   grid-column: 4 / span 2;
 }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .book-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .book-categories > div,
+  .book-categories > div:nth-child(4),
+  .book-categories > div:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .book-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .book-categories > div,
+  .book-categories > div:nth-child(4),
+  .book-categories > div:nth-child(5) {
+    grid-column: auto;
+  }
+} 
 
 /* =========================
    TEXT LINK
