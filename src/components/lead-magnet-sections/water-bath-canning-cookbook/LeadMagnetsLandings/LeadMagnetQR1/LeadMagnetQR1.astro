@@ -1,0 +1,220 @@
+---
+import "../styles.css";
+
+---
+
+
+<main class="landing">
+    <section class="book-landing">
+
+      <!-- HERO -->
+      <section class="hero book-hero">
+        <div class="hero__inner">
+          <div class="hero__image">
+            <img
+              src="/water-bath-canning-cover.png"
+              alt="The Ultimate Water Bath Canning Cookbook for Beginners"
+            />
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow">Free bonus for readers</p>
+
+            <h1>Start Your First Water Bath Canning Session with Confidence</h1>
+
+            <p class="subtitle">
+              Get your printable Water Bath Canning Checklist Pack and follow
+              every step safely — from equipment setup to the 12–24-hour seal check.
+            </p>
+
+            <ul class="benefits">
+              <li>Know what to prepare before you begin</li>
+              <li>Follow the water bath process step by step</li>
+              <li>Avoid the small mistakes beginners often miss</li>
+            </ul>
+
+            <button class="openModal button">
+          Download Your Checklist Pack
+        </button>
+
+            <p class="privacy">
+              No spam. Just practical tools you’ll actually use.
+            </p>
+             <!-- MODAL -->
+        <div
+          id="modal"
+          class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm z-50"
+        >
+          <div class="m-2 bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full">
+            <div class="flex justify-between items-start">
+              <h2 style="padding-top: 40px">Get your Free Checklist Pack</h2>
+
+              <button
+                id="closeModal"
+                class="text-gray-500 hover:text-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="_form_11"></div><script src="https://gahema.activehosted.com/f/embed.php?id=11" charset="utf-8"></script>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST STRIP -->
+      <section class="trust">
+        <h2>Get your Free Checklist Pack</h2>
+        <p>
+          Two printable checklists designed to stay beside you in the kitchen
+          while you work through your first batches.
+        </p>
+        
+      </section>
+
+      <!-- WHAT'S INSIDE -->
+      <section class="section">
+        <h2>What’s Inside Your Checklist Pack</h2>
+
+        <div class="pack-card">
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Checklist 1 — Equipment & Pre-Session Setup</h3>
+              <p>
+                Everything you need before your first session — jars, lids, canner,
+                rack, jar lifter, funnel, bubble remover, timer, and what to check
+                before you start.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Checklist 2 — Step-by-Step Water Bath Process</h3>
+              <p>
+                From preparing jars and filling them correctly to processing,
+                cooling, and completing the 12–24-hour seal check.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="note">
+          Both checklists are printable — keep them next to you while you can.
+        </p>
+      </section>
+
+      <!-- PROBLEM SOLUTION -->
+      <section class="problem-section">
+        <div class="problem-card">
+          <h2 style="padding-bottom: 18px">Because confidence starts with knowing the process</h2>
+
+          <p>
+            Water bath canning is simple once you know what happens next.
+            The trouble usually comes from small missed steps at the wrong moment.
+          </p>
+
+          <ul class="simple-list">
+            <li>Forgetting to keep jars hot before filling.</li>
+            <li>Starting the timer before the water returns to a full boil.</li>
+            <li>Missing the 12–24-hour seal check after cooling.</li>
+          </ul>
+
+          <p>
+            This checklist keeps the process visible so you can follow each step
+            with confidence.
+          </p>
+        </div>
+      </section>
+
+      <!-- HOW TO USE -->
+      <section class="section">
+        <h2>How You’ll Use It</h2>
+
+        <div class="steps book-categories">
+          <div>
+            <span>1</span>
+            <h3>Print</h3>
+            <p>Print the checklist before your canning session.</p>
+          </div>
+
+          <div>
+            <span>2</span>
+            <h3>Keep It Nearby</h3>
+            <p>Place it beside the stove or on the counter while you work.</p>
+          </div>
+
+          <div>
+            <span>3</span>
+            <h3>Follow Each Step</h3>
+            <p>Check off each step as you move from setup to seal check.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="final-cta">
+        <h2>Start Your First Batch the Right Way</h2>
+
+        <p>
+          Download your checklist pack and keep the water bath canning process
+          clear, simple, and safe from start to finish.
+        </p>
+
+        <button class="openModal button" style="margin-top: 12px;">
+          Download Your Checklist Pack
+        </button>
+
+        <p class="privacy">
+          No spam. Just practical tools you’ll actually use.
+        </p>
+      </section>
+
+    </section>
+  </main>
+  <script>
+  const modal = document.getElementById("modal");
+  const openBtns = document.querySelectorAll(".openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", openModal);
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+</script>

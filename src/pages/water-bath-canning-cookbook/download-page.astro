@@ -1,0 +1,14 @@
+---
+import DownloadSection from '../../components/lead-magnet-sections/water-bath-canning-cookbook/DownloadPage/DownloadSection.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin');
+
+---
+
+<Layout>
+  <main>
+    <DownloadSection leadMagnetId={leadMagnetId} />
+  </main>
+</Layout>

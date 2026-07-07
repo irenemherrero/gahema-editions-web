@@ -1,0 +1,214 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import "./styles.css";
+
+const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
+---
+
+<Layout>
+  <main>
+    <section class="book-landing">
+
+      <!-- HERO -->
+      <section class="hero book-hero">
+        <div class="hero__inner">
+          <div class="hero__image">
+            <img
+              src="/water-bath-canning-cover.png"
+              alt="The Ultimate Water Bath Canning Cookbook for Beginners"
+            />
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow">Beginner-friendly water bath canning</p>
+
+            <h1>Safe Water Bath Canning Made Simple</h1>
+
+            <p class="subtitle">
+              A practical guide for beginners who want safe, simple recipes,
+              clear step-by-step guidance, and a pantry filled with fruits,
+              tomatoes, pickles, jams, and more.
+            </p>
+
+            <ul class="benefits">
+              <li>Safe and simple beginner-friendly recipes</li>
+              <li>Fruits, tomatoes, pickles, jams, jellies, and more</li>
+              <li>Processing times, headspace guidance, and altitude adjustments included</li>
+            </ul>
+
+            <a href={amazonUrl} class="button" target="_blank" rel="noopener noreferrer">
+              Get the Book
+            </a>
+
+            <p class="privacy">
+              Available in ebook, paperback, and hardcover.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST STRIP -->
+      <section class="trust">
+        <h2>Everything explained. Nothing assumed.</h2>
+        <p>
+          Whether it's your first jar or your first canning season, every step is explained clearly so you always know what to do next.
+        </p>
+      </section>
+
+      <!-- WHAT'S INSIDE -->
+      <section class="section">
+        <h2>What You’ll Learn Inside</h2>
+
+        <div class="pack-card">
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>The Foundation of Safe Water Bath Canning</h3>
+              <p>
+                Understand acidity, equipment, jars, lids, headspace, processing times,
+                altitude adjustments, and seal checks before your first batch.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Safe Recipes for a Useful Pantry</h3>
+              <p>
+                Preserve fruits, tomatoes, pickles, relishes, jams, jellies, preserves,
+                syrups, juices, and fruit butters with tested guidance.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Built to Use in the Kitchen</h3>
+              <p>
+                Every recipe includes yield, prep time, processing time, shelf life,
+                and clear instructions so you can follow the process with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM SOLUTION -->
+      <section class="problem-section">
+        <div class="problem-card">
+          <h2 style="padding-bottom: 18px">The difference between hoping and knowing.</h2>
+
+          <p>
+            Water bath canning <strong>can feel uncertain at first</strong> —
+            especially when acidity, processing time, headspace, and safety all matter.
+          </p>
+
+          <ul class="simple-list">
+            <li>No more wondering which <strong>foods</strong> are safe for water bath canning.</li>
+            <li>No more guessing about <strong>processing times and altitude</strong>.</li>
+            <li><strong>No more feeling overwhelmed</strong> before your first batch.</li>
+          </ul>
+
+          <p>
+            This book gives you a <strong>clear system</strong> to follow, so you can build
+            your pantry one safe jar at a time.
+          </p>
+        </div>
+      </section>
+
+      <!-- RECIPE CATEGORIES -->
+      <section class="section">
+        <h2>Recipes Included</h2>
+
+        <div class="steps book-categories">
+          <div>
+            <span>1</span>
+            <h3>Fruits</h3>
+            <p>Peaches, pears, applesauce, berries, syrups, juices, and more.</p>
+          </div>
+
+          <div>
+            <span>2</span>
+            <h3>Tomatoes</h3>
+            <p>Whole tomatoes, crushed tomatoes, sauces, ketchup, and salsas.</p>
+          </div>
+
+          <div>
+            <span>3</span>
+            <h3>Pickles & Vegetables</h3>
+            <p>Dill pickles, pickled vegetables, relishes, and pantry staples.</p>
+          </div>
+
+          <div>
+            <span>4</span>
+            <h3>Jams & Jellies</h3>
+            <p>Classic jams, jellies, preserves, marmalades, and fruit spreads.</p>
+          </div>
+
+          <div>
+            <span>5</span>
+            <h3>Beginner Picks</h3>
+            <p>Start with the easiest recipes and build confidence batch by batch.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BONUSES -->
+      <section class="section bonuses-section">
+        <h2>Free Reader Bonuses</h2>
+
+        <div class="pack-card">
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Water Bath Canning Checklist Pack</h3>
+              <p>
+                Two printable checklists to help you prepare your equipment and follow
+                the water bath canning process step by step.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Water Bath Canning Troubleshooting Guide</h3>
+              <p>
+                Practical safety checklists, warning signs, and troubleshooting references
+                to help you understand what’s normal, what’s risky, and what to do next
+                when something looks wrong in a jar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="final-cta">
+        <h2>Start Preserving Right Now</h2>
+
+        <p>
+          Learn the process, follow safe steps, and preserve fruits, tomatoes,
+          pickles, jams, and more with confidence.
+        </p>
+
+        <a
+          href={amazonUrl}
+          class="button"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="margin-top: 12px;"
+        >
+          Get the Book
+        </a>
+
+        <p class="privacy">
+          Available on Amazon.
+        </p>
+      </section>
+
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const reviewUrl = "https://www.amazon.com/review/create-review?&asin=B0GX53B8B3";
+---
+<Layout>
+
+<section class="redirect-page">
+  <p>Redirecting you to the review page…</p>
+
+  <p>
+    <a href={reviewUrl}>Click here if nothing happens</a>
+  </p>
+</section>
+</Layout> 
+
+<script is:inline define:vars={{ reviewUrl }}>
+  window.location.href = reviewUrl;
+</script>
