@@ -1,6 +1,7 @@
 ---
 import "./styles.css";
 const { leadMagnetId } = Astro.props;
+import {amishCover} from '../../../../lib/constants';
 
 const bonuses = {
   qr1: {
@@ -9,9 +10,9 @@ const bonuses = {
       "Once confirmed, you’ll receive two printable checklists to help you prepare, process, and seal your first batch safely.",
   },
   qr2: {
-    title: "10 Sauces for Canned Meat Guide",
+    title: "Fresh at Serving Guide",
     description:
-      "Once confirmed, you’ll receive 10 beginner-friendly finishing sauces to turn your canned meat into quick meals.",
+      "Once confirmed, you’ll receive four authentic Amish finishing recipes that transform your jars into complete family meals in under 20 minutes.",
   },
 };
 
@@ -29,7 +30,7 @@ const bonus = bonuses[bonusKey];
     <div class="confirmation-inner">
       <div class="confirmation-image">
         <img
-          src="/canning-cover.png"
+          src={amishCover}
           alt="Canning Meat Cookbook for Beginners"
         />
       </div>

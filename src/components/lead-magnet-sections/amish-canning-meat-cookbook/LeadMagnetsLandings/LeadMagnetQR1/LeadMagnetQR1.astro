@@ -1,0 +1,219 @@
+---
+import "../styles.css";
+import {amishCover} from '../../../../../lib/constants';
+
+---
+
+  <main>
+    <section class="book-landing">
+
+      <!-- HERO -->
+      <section class="hero book-hero">
+        <div class="hero__inner">
+          <div class="hero__image">
+            <img
+              src={amishCover}
+              alt="The Ultimate Amish Canning Meat Cookbook for Beginners"
+            />
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow">Free bonus for readers</p>
+
+            <h1>Start Your First Pressure Canning Session Without Guesswork</h1>
+
+            <p class="subtitle">
+              Download your printable Pressure Canning Starter Checklist Pack —
+              two kitchen-ready guides that help you prepare your equipment,
+              follow the session in order, and complete the 12–24-hour seal check.
+            </p>
+
+            <ul class="benefits">
+              <li>Check your equipment before you begin</li>
+              <li>Follow every step in the correct order</li>
+              <li>Keep headspace and processing reminders beside your canner</li>
+            </ul>
+
+             <button class="openModal button">
+          Download Your Checklist Pack
+        </button>
+
+            <p class="privacy">
+          No spam. Just practical tools you’ll actually use.
+        </p>
+         <div
+          id="modal"
+          class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm z-50"
+        >
+          <div class="m-2 bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full">
+            <div class="flex justify-between items-start">
+              <h2 style="padding-top: 40px">Get your Free Checklist Pack</h2>
+
+              <button
+                id="closeModal"
+                class="text-gray-500 hover:text-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="_form_7"></div><script src="https://gahema.activehosted.com/f/embed.php?id=7" charset="utf-8"></script>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST STRIP -->
+      <section class="trust">
+        <h2>Every step in order. Nothing missed. Nothing guessed.</h2>
+        <p>
+          Keep these checklists beside your canner and follow along as you work.
+        </p>
+      </section>
+
+     
+      <!-- WHAT'S INSIDE -->
+      <section class="section">
+        <h2>What’s Inside Your Checklist Pack</h2>
+
+        <div class="pack-card">
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Checklist 1 — Equipment & Safety Check</h3>
+              <p>
+                A practical equipment inventory and canner safety inspection
+                to complete before your first session.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Checklist 2 — Session Guide</h3>
+              <p>
+                A complete pressure canning workflow from the night before to
+                the 12–24-hour seal check.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="note">
+          Both checklists are printable and designed to stay open on the counter
+          while you work.
+        </p>
+      </section>
+
+      <!-- PROBLEM SOLUTION -->
+      <section class="problem-section">
+        <div class="problem-card">
+          <h2 style="padding-bottom: 18px">Because every step matters</h2>
+
+          <p>
+            Pressure canning meat requires order, timing, and patience. This
+            checklist helps you move through the session without relying on memory.
+          </p>
+
+          <ul class="simple-list">
+            <li>Confirm jars, lids, tools, and canner parts before you start.</li>
+            <li>Keep headspace, venting, pressure, and processing checks in front of you.</li>
+            <li>Follow the correct cooling and seal-check routine after processing.</li>
+          </ul>
+
+          <p>
+            Follow the same process every time—so every jar gets the attention it deserves.
+          </p>
+        </div>
+      </section>
+
+      <!-- HOW TO USE -->
+      <section class="section">
+        <h2>How You’ll Use It</h2>
+
+        <div class="steps book-categories">
+          <div>
+            <span>1</span>
+            <h3>Print</h3>
+            <p>Print the checklist before your canning session.</p>
+          </div>
+
+          <div>
+            <span>2</span>
+            <h3>Prepare</h3>
+            <p>Check your equipment, jars, lids, canner, and workspace before food prep begins.</p>
+          </div>
+
+          <div>
+            <span>3</span>
+            <h3>Follow Along</h3>
+            <p>Keep it beside the canner and check off each step from loading to seal check.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="final-cta">
+        <h2>Start Your First Batch the Right Way</h2>
+
+        <p>
+          Download your printable checklist pack and keep the pressure canning
+          process clear, safe, and organized from start to finish.
+        </p>
+
+        <button class="openModal button" style="margin-top: 12px;">
+          Download Your Checklist Pack
+        </button>
+        <p class="privacy">
+          Free printable PDF for readers of
+          <em>The Ultimate Amish Canning Meat Cookbook for Beginners.</em>
+        </p>
+      </section>
+
+    </section>
+  </main>
+
+<script>
+  const modal = document.getElementById("modal");
+  const openBtns = document.querySelectorAll(".openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", openModal);
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+</script>

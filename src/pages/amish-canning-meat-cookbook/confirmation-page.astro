@@ -1,0 +1,13 @@
+---
+import ConfirmationSection from '../../components/lead-magnet-sections/amish-canning-meat-cookbook/ConfirmationPage/ConfirmationSection.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin');
+---
+
+<Layout>
+  <main>
+    <ConfirmationSection leadMagnetId={leadMagnetId} />
+  </main>
+</Layout>

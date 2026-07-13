@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import "./styles.css";
 
 const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
+import {waterBathCover} from '../../lib/constants';
+
 ---
 
 <Layout>
@@ -14,7 +16,7 @@ const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
         <div class="hero__inner">
           <div class="hero__image">
             <img
-              src="/water-bath-canning-cover.png"
+              src={waterBathCover}
               alt="The Ultimate Water Bath Canning Cookbook for Beginners"
             />
           </div>

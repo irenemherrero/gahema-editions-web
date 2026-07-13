@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import "./styles.css";
+import {amishCover} from '../../lib/constants';
+
+const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
+---
+
+<Layout>
+  <main>
+    <section class="book-landing">
+
+      <!-- HERO -->
+      <section class="hero book-hero">
+        <div class="hero__inner">
+          <div class="hero__image">
+            <img
+              src={amishCover}
+              alt="The Ultimate Amish Canning Meat Cookbook for Beginners"
+            />
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow">Amish-inspired pressure canning</p>
+
+            <h1>Open the Jar. The Amish Kitchen Comes to Your Table.</h1>
+
+            <p class="subtitle">
+              A beginner-friendly guide to pressure canning Amish-style meat recipes
+              safely, simply, and with real pantry value.
+            </p>
+
+            <ul class="benefits">
+              <li>30 USDA-based Amish-inspired meat recipes</li>
+              <li>Beef, pork, poultry, and wild game</li>
+              <li>Pressure, time, headspace, and altitude guidance included</li>
+            </ul>
+
+            <a href={amazonUrl} class="button" target="_blank" rel="noopener noreferrer">
+              Get the Book
+            </a>
+
+            <p class="privacy">
+              Available in ebook, paperback, and hardcover.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUST STRIP -->
+      <section class="trust">
+        <h2>Amish wisdom. Safe pressure canning.</h2>
+        <p>
+          This book brings together traditional Amish flavors, practical pantry cooking,
+          and clear USDA-based pressure canning guidance for beginners.
+        </p>
+      </section>
+
+      <!-- WHAT'S INSIDE -->
+      <section class="section">
+        <h2>What You’ll Learn Inside</h2>
+
+        <div class="pack-card">
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>The Foundation of Safe Meat Canning</h3>
+              <p>
+                Learn the equipment, safety principles, headspace, pressure,
+                processing times, altitude adjustments, and seal checks before your first batch.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>The Amish Way in the Jar</h3>
+              <p>
+                Apple cider vinegar, dried sweet corn, caraway seeds, dried apples,
+                celery seed, and apple butter bring real Pennsylvania Dutch character
+                to practical pantry meals.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Recipes Built for Real Use</h3>
+              <p>
+                Each recipe is designed as a complete pantry base you can open,
+                heat, finish if needed, and bring to the table with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM SOLUTION -->
+      <section class="problem-section">
+        <div class="problem-card">
+          <h2 style="padding-bottom: 18px">Because tradition still needs a safe process</h2>
+
+          <p>
+            Amish cooking is practical, generous, and deeply rooted in the pantry —
+            but pressure canning meat still has rules that should not be guessed.
+          </p>
+
+          <ul class="simple-list">
+            <li>No more wondering which <strong>Amish-style recipes</strong> are safe to can.</li>
+            <li>No more guessing about <strong>pressure, time, and altitude</strong>.</li>
+            <li>No confusing shortcuts, unsafe thickeners, dairy, pasta, or dough in the jar.</li>
+          </ul>
+
+          <p>
+            This book gives you a <strong>clear pressure canning system</strong>
+            with Amish-inspired flavor and modern safety guidance.
+          </p>
+        </div>
+      </section>
+
+      <!-- RECIPE CATEGORIES -->
+      <section class="section">
+        <h2>Recipes Included</h2>
+
+        <div class="steps book-categories">
+          <div>
+            <span>1</span>
+            <h3>Beef</h3>
+            <p>Sunday pot roast, brisket, dried corn soup, beef and dumpling stew, and more.</p>
+          </div>
+
+          <div>
+            <span>2</span>
+            <h3>Pork</h3>
+            <p>Pork and sauerkraut, apple cider pulled pork, ham and bean soup, and harvest braises.</p>
+          </div>
+
+          <div>
+            <span>3</span>
+            <h3>Poultry</h3>
+            <p>Chicken corn soup, wedding roast, turkey soup, and chicken pot pie filling.</p>
+          </div>
+
+          <div>
+            <span>4</span>
+            <h3>Wild Game</h3>
+            <p>Venison, rabbit, wild turkey, juniper, bay, dried mushrooms, and rustic pantry flavor.</p>
+          </div>
+
+          <div>
+            <span>5</span>
+            <h3>Farm Kitchen & Sunday Table</h3>
+            <p>Everyday pantry bases and special-occasion Amish dishes adapted for safe canning.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BONUSES -->
+      <section class="section bonuses-section">
+        <h2>Free Reader Bonuses</h2>
+
+        <div class="pack-card">
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Amish Canning Checklist Pack</h3>
+              <p>
+                Printable planning and session checklists to help you prepare,
+                process, cool, check, and store your jars with confidence.
+              </p>
+            </div>
+          </div>
+
+          <div class="pack-item">
+            <span>✓</span>
+            <div>
+              <h3>Fresh at Serving Guide</h3>
+              <p>
+                Discover the homemade dumplings, egg noodles, and pot pie crusts that
+                complete the book's most iconic Amish recipes. The jar holds everything—
+                you bring the fresh finishing touch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="final-cta">
+        <h2>Start Filling a Shelf That Lasts</h2>
+
+        <p>
+          Learn the process, follow safe pressure canning steps, and bring
+          Amish-inspired pantry meals to your table one jar at a time.
+        </p>
+
+        <a
+          href={amazonUrl}
+          class="button"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="margin-top: 12px;"
+        >
+          Get the Book
+        </a>
+
+        <p class="privacy">
+          Available on Amazon.
+        </p>
+      </section>
+
+    </section>
+  </main>
+</Layout>
