@@ -118,6 +118,22 @@ h2 {
   transition: all 0.2s ease;
 }
 
+.button-comming-soon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 34px;
+  border-radius: 999px;
+  background: #283015;
+  color: white;
+  text-decoration: none;
+  border: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .button:hover {
   background: #bf5a21;
 }
