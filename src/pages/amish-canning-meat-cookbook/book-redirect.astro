@@ -1,0 +1,11 @@
+---
+import { amishAmazonUrl } from "../../lib/constants";
+
+const bookUrl = amishAmazonUrl;
+
+if (bookUrl.trim()) {
+  return Astro.redirect(bookUrl);
+}
+
+return Astro.redirect("/coming-soon");
+---

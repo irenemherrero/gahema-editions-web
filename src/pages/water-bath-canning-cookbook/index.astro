@@ -2,8 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import "./styles.css";
 
-const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
-import {waterBathCover} from '../../lib/constants';
+import {waterBathCover, waterBathAmazonUrl} from '../../lib/constants';
 
 ---
 
@@ -38,7 +37,7 @@ import {waterBathCover} from '../../lib/constants';
               <li>Processing times, headspace guidance, and altitude adjustments included</li>
             </ul>
 
-            <a href={amazonUrl} class="button" target="_blank" rel="noopener noreferrer">
+            <a href={waterBathAmazonUrl} class="button" target="_blank" rel="noopener noreferrer">
               Get the Book
             </a>
 
@@ -79,7 +78,7 @@ import {waterBathCover} from '../../lib/constants';
               <h3>Safe Recipes for a Useful Pantry</h3>
               <p>
                 Preserve fruits, tomatoes, pickles, relishes, jams, jellies, preserves,
-                syrups, juices, and fruit butters with tested guidance.
+                syrups, and fruit butters with tested guidance.
               </p>
             </div>
           </div>
@@ -128,7 +127,7 @@ import {waterBathCover} from '../../lib/constants';
           <div>
             <span>1</span>
             <h3>Fruits</h3>
-            <p>Peaches, pears, applesauce, berries, syrups, juices, and more.</p>
+            <p>Peaches, pears, applesauce, berries, syrups, and more.</p>
           </div>
 
           <div>
@@ -146,7 +145,7 @@ import {waterBathCover} from '../../lib/constants';
           <div>
             <span>4</span>
             <h3>Jams & Jellies</h3>
-            <p>Classic jams, jellies, preserves, marmalades, and fruit spreads.</p>
+            <p>Classic jams, jellies, preserves, marmalades, and fruit butters.</p>
           </div>
 
           <div>
@@ -197,7 +196,7 @@ import {waterBathCover} from '../../lib/constants';
         </p>
 
         <a
-          href={amazonUrl}
+          href={waterBathAmazonUrl}
           class="button"
           target="_blank"
           rel="noopener noreferrer"

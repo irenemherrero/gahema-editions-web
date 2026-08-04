@@ -1,6 +1,7 @@
 ---
 
 import "./styles.css";
+import { pressureCanningCover } from "../../../../lib/constants"
 
 const bonuses = {
   qr1: {
@@ -31,7 +32,7 @@ const bonus = bonuses[bonusKey] ?? bonuses.checklist;
     <div class="download-inner">
       <div class="download-image">
         <img
-          src="/canning-cover.png"
+          src={pressureCanningCover}
           alt="Canning Meat Cookbook for Beginners"
         />
       </div>

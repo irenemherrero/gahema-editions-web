@@ -1,8 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import "./styles.css";
+import { pressureCanningCover, pressureCanningAmazonUrl } from "../../lib/constants"
 
-const amazonUrl = "https://www.amazon.com/Canning-Meat-Cookbook-Beginners/dp/B0GX53B8B3";
+import "./styles.css";
 
 ---
 
@@ -14,7 +14,7 @@ const amazonUrl = "https://www.amazon.com/Canning-Meat-Cookbook-Beginners/dp/B0G
     <div class="hero__inner">
       <div class="hero__image">
         <img
-          src="/canning-cover.png"
+          src={pressureCanningCover}
           alt="Canning Meat Cookbook for Beginners"
         />
       </div>
@@ -35,7 +35,7 @@ const amazonUrl = "https://www.amazon.com/Canning-Meat-Cookbook-Beginners/dp/B0G
           <li>Pressure, time, and altitude tables included</li>
         </ul>
 
-        <a href={amazonUrl} class="button" target="_blank" rel="noopener noreferrer">
+        <a href={pressureCanningAmazonUrl} class="button" target="_blank" rel="noopener noreferrer">
           Get the Book
         </a>
 
@@ -87,7 +87,7 @@ const amazonUrl = "https://www.amazon.com/Canning-Meat-Cookbook-Beginners/dp/B0G
         <div>
           <h3>Built to Use in the Kitchen</h3>
           <p>
-            Every recipe includes difficulty rating, pack style, cost per jar, and shelf life. A Quick Recipe Index lets you find what you need by protein in seconds — no flipping through the whole book.
+            Every recipe includes difficulty rating, preparation time, cost per jar and shelf life. A Quick Recipe Index lets you find what you need by protein in seconds — no flipping through the whole book.
           </p>
         </div>
       </div>
@@ -192,7 +192,7 @@ const amazonUrl = "https://www.amazon.com/Canning-Meat-Cookbook-Beginners/dp/B0G
     </p>
 
     <a
-      href={amazonUrl}
+      href={pressureCanningAmazonUrl}
       class="button"
       target="_blank"
       rel="noopener noreferrer"

@@ -1,9 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import "./styles.css";
-import {amishCover} from '../../lib/constants';
-
-const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
+import {amishCover, amishAmazonUrl} from '../../lib/constants';
 ---
 
 <Layout>
@@ -31,18 +29,16 @@ const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
             </p>
 
             <ul class="benefits">
-              <li>30 USDA-based Amish-inspired meat recipes</li>
+              <li>30 USDA-safe Amish-inspired meat recipes</li>
               <li>Beef, pork, poultry, and wild game</li>
               <li>Pressure, time, headspace, and altitude guidance included</li>
             </ul>
-
-            <a href={amazonUrl} class="button" target="_blank" rel="noopener noreferrer">
+            <a href={amishAmazonUrl} class="button" target="_blank" rel="noopener noreferrer">
               Get the Book
-            </a>
-
-            <p class="privacy">
+            </a> 
+             <p class="privacy">
               Available in ebook, paperback, and hardcover.
-            </p>
+            </p>  
           </div>
         </div>
       </section>
@@ -52,7 +48,7 @@ const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
         <h2>Amish wisdom. Safe pressure canning.</h2>
         <p>
           This book brings together traditional Amish flavors, practical pantry cooking,
-          and clear USDA-based pressure canning guidance for beginners.
+          and clear USDA-safe pressure canning guidance for beginners.
         </p>
       </section>
 
@@ -77,8 +73,8 @@ const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
             <div>
               <h3>The Amish Way in the Jar</h3>
               <p>
-                Apple cider vinegar, dried sweet corn, caraway seeds, dried apples,
-                celery seed, and apple butter bring real Pennsylvania Dutch character
+                Apple cider vinegar, dried sweet corn, caraway seeds, dried apples, and 
+                celery seed bring real Pennsylvania Dutch character
                 to practical pantry meals.
               </p>
             </div>
@@ -146,7 +142,7 @@ const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
           <div>
             <span>4</span>
             <h3>Wild Game</h3>
-            <p>Venison, rabbit, wild turkey, juniper, bay, dried mushrooms, and rustic pantry flavor.</p>
+            <p>Venison, rabbit, and wild turkey paired with juniper berries, bay leaves, or dried mushrooms.</p>
           </div>
 
           <div>
@@ -195,9 +191,8 @@ const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
           Learn the process, follow safe pressure canning steps, and bring
           Amish-inspired pantry meals to your table one jar at a time.
         </p>
-
         <a
-          href={amazonUrl}
+          href={amishAmazonUrl}
           class="button"
           target="_blank"
           rel="noopener noreferrer"
@@ -205,7 +200,6 @@ const amazonUrl = "PASTE_YOUR_AMAZON_URL_HERE";
         >
           Get the Book
         </a>
-
         <p class="privacy">
           Available on Amazon.
         </p>
