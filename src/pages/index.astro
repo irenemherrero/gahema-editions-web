@@ -11,7 +11,7 @@ const books = [
     cover: pressureCanningCover,
 
     description:
-      "Safe, beginner-friendly guidance and 52 USDA-based recipes for preserving beef, pork, poultry, wild game, and complete meals in jars.",
+      "Safe, beginner-friendly guidance and 52 USDA-safe recipes for preserving beef, pork, poultry, wild game, and complete meals in jars.",
 
     pageUrl: "/canning-meat-cookbook",
 
@@ -210,7 +210,7 @@ const books = [
           books.map((book) => (
             <article class={`book-card book-card-${book.accent}`}>
               <div class="book-cover-area">
-                <span
+                {/* <span
                   class:list={[
                     "status-badge",
                     book.published
@@ -219,7 +219,7 @@ const books = [
                   ]}
                 >
                   {book.status}
-                </span>
+                </span> */}
 
                 <a
                   href={book.pageUrl}

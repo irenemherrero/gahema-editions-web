@@ -1,5 +1,7 @@
 ---
-const bookUrl = "";
+import { waterBathAmazonUrl } from "../../lib/constants";
+
+const bookUrl = waterBathAmazonUrl;
 
 if (bookUrl.trim()) {
   return Astro.redirect(bookUrl);

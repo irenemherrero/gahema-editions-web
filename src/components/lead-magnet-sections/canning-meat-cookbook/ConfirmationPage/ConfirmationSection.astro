@@ -1,5 +1,6 @@
 ---
 import "./styles.css";
+import { pressureCanningCover } from "../../../../lib/constants"
 const { leadMagnetId } = Astro.props;
 
 const bonuses = {
@@ -29,7 +30,7 @@ const bonus = bonuses[bonusKey];
     <div class="confirmation-inner">
       <div class="confirmation-image">
         <img
-          src="/canning-cover.png"
+          src={pressureCanningCover}
           alt="Canning Meat Cookbook for Beginners"
         />
       </div>
