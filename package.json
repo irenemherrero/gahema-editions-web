@@ -2,9 +2,9 @@
 	"name": "gahema-press-website",
 	"type": "module",
 	"version": "0.0.1",
-  "engines": {
-    "node": "20.x"
-  },
+	"engines": {
+		"node": "24.x"
+	},
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
@@ -12,7 +12,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/vercel": "^8.0.5",
+		"@astrojs/vercel": "^9.0.5",
 		"astro": "^5.2.1"
 	},
 	"devDependencies": {
