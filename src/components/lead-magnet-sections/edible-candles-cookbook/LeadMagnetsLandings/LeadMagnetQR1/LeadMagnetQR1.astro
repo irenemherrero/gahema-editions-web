@@ -1,0 +1,252 @@
+---
+import "../styles.css";
+import { edibleCandlesCover } from "../../../../../lib/constants"
+---
+
+<main class="landing">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__image">
+        <img
+          src={edibleCandlesCover}
+          alt="The Edible Candles Cookbook"
+        />
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow">Free bonus for readers</p>
+
+        <h1>Make Every Gathering Even Easier</h1>
+
+        <p class="subtitle">
+          Get your <strong>Edible Candles Bonus Kit</strong>: five printable
+          extras to plan the party, invent new flavors, and set a table people
+          will remember.
+        </p>
+
+        <ul class="benefits">
+          <li>Know which candles to make for every occasion</li>
+          <li>Mix and match your own flavors</li>
+          <li>Print signs, tags, and cards for your table</li>
+        </ul>
+
+        <button class="openModal button">
+          Download Your Bonus Kit
+        </button>
+
+        <p class="privacy">
+          No spam. Just practical tools you’ll actually use.
+        </p>
+
+        <!-- MODAL -->
+        <div
+          id="modal"
+          class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm z-50"
+        >
+          <div class="m-2 bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full">
+            <div class="flex justify-between items-start">
+              <h2 style="padding-top: 40px">Get your Free Bonus Kit</h2>
+
+              <button
+                id="closeModal"
+                class="text-gray-500 hover:text-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="_form_15"></div>
+            <script
+              src="https://gahema.activehosted.com/f/embed.php?id=15"
+              charset="utf-8"
+            ></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust">
+    <h2>Hosting soon? We’ve got you.</h2>
+    <p>
+      The book teaches you how to make the candles. This kit helps you plan
+      what to make, how much, and how to bring it all to the table.
+    </p>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="section">
+    <h2>What’s Inside Your Bonus Kit</h2>
+
+    <div class="pack-card">
+      <div class="pack-item">
+        <span>✓</span>
+        <div>
+          <h3>Hosting Guide & Party Plans</h3>
+          <p>
+            Which candles to make for holidays, game day, and date night, what
+            to serve alongside, and how much to make for your crowd.
+          </p>
+        </div>
+      </div>
+
+      <div class="pack-item">
+        <span>✓</span>
+        <div>
+          <h3>The Flavor Matrix</h3>
+          <p>
+            Mix and match fats, flavors, and finishing touches to invent your
+            own candles.
+          </p>
+        </div>
+      </div>
+
+      <div class="pack-item">
+        <span>✓</span>
+        <div>
+          <h3>Table Signs & Gift Tags</h3>
+          <p>
+            A sweet “dip in, but don’t eat the wick” sign for the table, and
+            tags for giving candles as gifts.
+          </p>
+        </div>
+      </div>
+
+      <div class="pack-item">
+        <span>✓</span>
+        <div>
+          <h3>Quick-Start Cheat Sheet</h3>
+          <p>
+            The whole method on one printable page, plus a checklist of
+            everything you need.
+          </p>
+        </div>
+      </div>
+
+      <div class="pack-item">
+        <span>✓</span>
+        <div>
+          <h3>My Candle Cards</h3>
+          <p>
+            Printable cards to record your own creations, and how they turned
+            out.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">
+      Everything is printable — keep it in the kitchen or on the table.
+    </p>
+  </section>
+
+  <!-- PROBLEM SOLUTION -->
+  <section class="problem-section">
+    <div class="problem-card">
+      <h2>The Candle Is Ready. Now What?</h2>
+
+      <p>
+        Making the candle is the fun part. Planning the rest of the table is
+        where most hosts get stuck.
+      </p>
+
+      <ul class="simple-list">
+        <li>Which candle fits this occasion?</li>
+        <li>What should I serve with it?</li>
+        <li>How much do I need for my guests?</li>
+      </ul>
+
+      <p>
+        This kit puts the answers in one place — so you can spend less time
+        planning and more time with your guests.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="section">
+    <h2>How You’ll Use It</h2>
+
+    <div class="steps">
+      <div>
+        <span>1</span>
+        <h3>Plan</h3>
+        <p>Pick your candles and menu with the Hosting Guide.</p>
+      </div>
+
+      <div>
+        <span>2</span>
+        <h3>Make</h3>
+        <p>Keep the Cheat Sheet next to you while you work.</p>
+      </div>
+
+      <div>
+        <span>3</span>
+        <h3>Set the Table</h3>
+        <p>Add the table sign, and write down your favorites.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="signup">
+    <h2>Light Up Your Next Gathering</h2>
+
+    <p>
+      Download your bonus kit and get everything ready for the table.
+    </p>
+
+    <button class="openModal button" style="margin-top: 12px;">
+      Download Your Bonus Kit
+    </button>
+
+    <p class="privacy">
+      No spam. Just practical tools you’ll actually use.
+    </p>
+  </section>
+</main>
+
+<script>
+  const modal = document.getElementById("modal");
+  const openBtns = document.querySelectorAll(".openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", openModal);
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+</script>

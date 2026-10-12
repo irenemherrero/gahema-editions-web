@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {edibleCandlesReviewUrl} from '../../lib/constants';
+---
+<Layout>
+
+<section class="redirect-page">
+  <p>Redirecting you to the review page…</p>
+
+  <p>
+    <a href={edibleCandlesReviewUrl}>Click here if nothing happens</a>
+  </p>
+</section>
+</Layout> 
+
+<script is:inline define:vars={{ edibleCandlesReviewUrl }}>
+  window.location.href = edibleCandlesReviewUrl;
+</script>

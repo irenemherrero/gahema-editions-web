@@ -1,0 +1,73 @@
+---
+import "./styles.css";
+import { edibleCandlesCover } from "../../../../lib/constants"
+const { leadMagnetId } = Astro.props;
+
+const bonuses = {
+  qr1: {
+    title: "Edible Candles Bonus Kit",
+    description:
+      "Once confirmed, you’ll receive five printable extras to help you plan your gatherings, invent new flavors, and set the table.",
+  },
+};
+
+const bonusKey = leadMagnetId
+const bonus = bonuses[bonusKey] ?? bonuses.qr1;
+---
+
+<main class="confirmation-page">
+  <header class="confirmation-topbar">
+    <p>Almost there!</p>
+    <h1>Check your inbox</h1>
+  </header>
+
+  <section class="confirmation-section">
+    <div class="confirmation-inner">
+      <div class="confirmation-image">
+        <img
+          src={edibleCandlesCover}
+          alt="The Edible Candles Cookbook"
+        />
+      </div>
+
+      <div class="confirmation-content">
+        <p class="eyebrow">One quick step left</p>
+
+        <h2>
+          Your access to the <span>“{bonus.title}”</span> is pending
+          confirmation.
+        </h2>
+
+        <p class="confirmation-description">
+          {bonus.description}
+        </p>
+
+        <div class="confirmation-steps">
+          <div class="confirmation-step">
+            <span>1</span>
+            <div>
+              <h3>Find our email</h3>
+              <p>From: GAHEMA PRESS TEAM</p>
+            </div>
+          </div>
+
+          <div class="confirmation-step">
+            <span>2</span>
+            <div>
+              <h3>Check Promotions or Spam</h3>
+              <p>If you don’t see it in your inbox, look there next.</p>
+            </div>
+          </div>
+
+          <div class="confirmation-step">
+            <span>3</span>
+            <div>
+              <h3>Click the confirmation link</h3>
+              <p>Your free bonus will be sent after confirmation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
