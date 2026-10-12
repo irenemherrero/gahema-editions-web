@@ -1,0 +1,427 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { edibleCandlesCover } from "../lib/constants.js";
+const books = [
+  {
+    title: "The Edible Candles Cookbook",
+    category: "Creative Cooking & Entertaining",
+
+    cover: edibleCandlesCover,
+
+    description:
+      "Butter, chocolate, and cheese candles you light at the table, blow out, and dip right into, with 75 easy sweet and savory recipes for holidays, parties, and every gathering.",
+
+    pageUrl: "/edible-candles-cookbook",
+
+    accent: "candle",
+  },
+];
+---
+
+<Layout
+  title="Gahema Press | Other Titles"
+  description="Discover Gahema Press books beyond the canning collection."
+>
+  <main class="catalog-page">
+
+    <!-- =====================================================
+         CABECERA
+    ====================================================== -->
+
+    <section class="titles-hero">
+      <div class="hero-circle hero-circle-left" aria-hidden="true"></div>
+      <div class="hero-circle hero-circle-right" aria-hidden="true"></div>
+
+      <div class="titles-hero-content">
+        <p class="eyebrow">Other Titles from Gahema Press</p>
+
+        <h1>Beyond the canning shelf</h1>
+
+        <p class="hero-description">
+          More books from Gahema Press outside the canning collection, made
+          with the same care: clear steps and practical recipes for real life.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CATÁLOGO
+    ====================================================== -->
+
+    <section class="collection-section" id="collection">
+      <div class="book-grid">
+        {
+          books.map((book) => (
+            <article class={`book-card book-card-${book.accent}`}>
+              <div class="book-cover-area">
+                <a
+                  href={book.pageUrl}
+                  class="book-cover-link"
+                  aria-label={`Discover ${book.title}`}
+                >
+                  <img
+                    src={book.cover}
+                    alt={`Cover of ${book.title}`}
+                    class="book-cover"
+                    loading="lazy"
+                    width="600"
+                    height="900"
+                  />
+                </a>
+              </div>
+
+              <div class="book-content">
+                <p class="book-category">
+                  {book.category}
+                </p>
+
+                <h3>
+                  <a href={book.pageUrl}>
+                    {book.title}
+                  </a>
+                </h3>
+
+                <p class="book-description">
+                  {book.description}
+                </p>
+
+                <div class="book-actions">
+                  <a
+                    href={book.pageUrl}
+                    class="button button-outline"
+                  >
+                    Discover the Book
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style is:global>
+  html,
+  body {
+    background: #f3f4f6 !important;
+    color: #263617;
+    font-family: "Barlow", Arial, sans-serif !important;
+  }
+
+  .catalog-page h1,
+  .catalog-page h2,
+  .catalog-page h3,
+  .catalog-page p,
+  .catalog-page a,
+  .catalog-page span {
+    font-family: inherit !important;
+  }
+
+  :root {
+    --page-bg: #f3f4f6;
+    --section-bg: #ffffff;
+    --ink: #263617;
+    --muted: #575b5f;
+    --border: #d9ded7;
+
+    --terracotta: #e87525;
+    --terracotta-dark: #c85f18;
+
+    --candle: #9a6a2c;
+
+    --catalog-shadow:
+      0 18px 50px rgba(38, 54, 23, 0.12);
+  }
+</style>
+
+<style>
+  .catalog-page {
+    overflow: hidden;
+    background: var(--page-bg);
+    color: var(--ink);
+    font-family: "Barlow", sans-serif;
+    line-height: 1.7;
+  }
+
+  .catalog-page *,
+  .catalog-page *::before,
+  .catalog-page *::after {
+    box-sizing: border-box;
+  }
+
+  .catalog-page img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .catalog-page a {
+    color: inherit;
+  }
+
+  /* =====================================================
+     ELEMENTOS COMPARTIDOS
+  ====================================================== */
+
+  .eyebrow {
+    margin: 0 0 21px;
+    color: var(--terracotta);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .button {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 27px;
+    border: 1px solid transparent;
+
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+      transform 180ms ease,
+      background-color 180ms ease,
+      color 180ms ease;
+  }
+
+  .button-outline {
+    border-color: var(--ink);
+    background: transparent;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+
+  .button-outline:hover {
+    background: var(--ink);
+    color: white !important;
+    transform: translateY(-2px);
+  }
+
+  /* =====================================================
+     CABECERA
+  ====================================================== */
+
+  .titles-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 24px 90px;
+    text-align: center;
+  }
+
+  .titles-hero-content {
+    width: min(780px, 100%);
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+  }
+
+  .titles-hero h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 5vw, 4.4rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.13;
+  }
+
+  .hero-description {
+    max-width: 640px;
+    margin: 26px auto 0;
+    color: var(--muted);
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+
+  .hero-circle {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: 1px solid rgba(38, 54, 23, 0.11);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-circle-left {
+    bottom: -185px;
+    left: -85px;
+  }
+
+  .hero-circle-right {
+    top: -190px;
+    right: -75px;
+  }
+
+  /* =====================================================
+     CATÁLOGO
+  ====================================================== */
+
+  .collection-section {
+    padding: 100px 24px 150px;
+    background: white;
+  }
+
+  .book-grid {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 375px));
+    justify-content: center;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .book-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--section-bg);
+    border: 1px solid var(--border);
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .book-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--catalog-shadow);
+  }
+
+  .book-cover-area {
+    min-height: 450px;
+    display: grid;
+    place-items: center;
+  }
+
+  .book-card-candle .book-cover-area {
+    background: #f6efe3;
+  }
+
+  .book-cover-link {
+    width: min(250px, 79%);
+    text-decoration: none;
+  }
+
+  .book-cover {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 22px 36px rgba(31, 27, 21, 0.28);
+    transition: transform 220ms ease;
+  }
+
+  .book-cover-link:hover .book-cover {
+    transform: scale(1.025);
+  }
+
+  .book-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 31px 32px;
+  }
+
+  .book-category {
+    margin: 0 0 13px;
+    color: var(--terracotta);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .book-card-candle .book-category {
+    color: var(--candle);
+  }
+
+  .book-content h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.38;
+  }
+
+  .book-content h3 a {
+    text-decoration: none;
+  }
+
+  .book-description {
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.75;
+  }
+
+  .book-actions {
+    margin-top: auto;
+  }
+
+  /* =====================================================
+     TABLET
+  ====================================================== */
+
+  @media (max-width: 1050px) {
+    .book-grid {
+      max-width: 690px;
+      grid-template-columns: 1fr;
+    }
+
+    .book-card {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.92fr) 1.08fr;
+    }
+
+    .book-cover-area {
+      min-height: 540px;
+    }
+
+    .book-content {
+      justify-content: center;
+      padding: 48px 39px;
+    }
+  }
+
+  /* =====================================================
+     MÓVIL
+  ====================================================== */
+
+  @media (max-width: 720px) {
+    .titles-hero {
+      padding: 80px 16px 70px;
+    }
+
+    .collection-section {
+      padding: 70px 16px 110px;
+    }
+
+    .book-card {
+      display: flex;
+    }
+
+    .book-cover-area {
+      min-height: 445px;
+    }
+
+    .book-content {
+      padding: 33px 25px 31px;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .catalog-page *,
+    .catalog-page *::before,
+    .catalog-page *::after {
+      transition: none !important;
+    }
+  }
+</style>

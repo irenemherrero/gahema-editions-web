@@ -1,0 +1,15 @@
+---
+import LeadMagnetQR1 from '../../components/lead-magnet-sections/edible-candles-cookbook/LeadMagnetsLandings/LeadMagnetQR1/LeadMagnetQR1.astro';
+
+import Layout from '../../layouts/Layout.astro';
+
+const { searchParams } = Astro.url;
+const leadMagnetId = searchParams.get('origin') || 'qr1';
+
+---
+
+<Layout>
+  <main>
+    {leadMagnetId === "qr1" && <LeadMagnetQR1 />}
+  </main>
+</Layout>

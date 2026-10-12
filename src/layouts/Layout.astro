@@ -6,7 +6,11 @@ const mainRoutes = [
   "/canning-meat-cookbook",
   "/water-bath-canning-cookbook",
   "/amish-canning-meat-cookbook",
+  "/other-titles",
+  "/edible-candles-cookbook",
 ];
+
+const otherTitlesRoutes = ["/other-titles", "/edible-candles-cookbook"];
 
 const currentPath = Astro.url.pathname.replace(/\/+$/, "") || "/";
 const showHeader = mainRoutes.includes(currentPath);
@@ -107,6 +111,16 @@ const showHeader = mainRoutes.includes(currentPath);
             >
               Amish Canning
             </a>
+
+            <a
+              href="/other-titles"
+              class:list={[
+                "nav-link",
+                otherTitlesRoutes.includes(currentPath) && "active",
+              ]}
+            >
+              Other Titles
+            </a>
           </nav>
 
           <button
@@ -171,6 +185,16 @@ const showHeader = mainRoutes.includes(currentPath);
             ]}
           >
             Amish Canning
+          </a>
+
+          <a
+            href="/other-titles"
+            class:list={[
+              "mobile-nav-link",
+              otherTitlesRoutes.includes(currentPath) && "active",
+            ]}
+          >
+            Other Titles
           </a>
         </nav>
       </header>

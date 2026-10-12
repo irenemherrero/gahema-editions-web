@@ -1,0 +1,127 @@
+---
+
+import "./styles.css";
+import { edibleCandlesCover, edibleCandlesReviewUrl } from "../../../../lib/constants"
+
+const bonuses = {
+  qr1: {
+    title: "Edible Candles Bonus Kit",
+    description:
+      "Your five printables are ready. Download the ones you need now, and come back for the rest anytime.",
+    downloads: [
+      {
+        name: "Hosting Guide & Party Plans",
+        text: "What to make, what to serve, and how much for your crowd.",
+        downloadUrl: "/downloads/edible-candles-hosting-guide-party-plans.pdf",
+      },
+      {
+        name: "The Flavor Matrix",
+        text: "Mix and match fats, flavors, and finishing touches.",
+        downloadUrl: "/downloads/edible-candles-flavor-matrix.pdf",
+      },
+      {
+        name: "Table Signs & Gift Tags",
+        text: "A table sign for your guests and tags for gifting.",
+        downloadUrl: "/downloads/edible-candles-table-signs-gift-tags.pdf",
+      },
+      {
+        name: "Quick-Start Cheat Sheet",
+        text: "The whole method on one page, plus a checklist.",
+        downloadUrl: "/downloads/edible-candles-quick-start-cheat-sheet.pdf",
+      },
+      {
+        name: "My Candle Cards",
+        text: "Printable cards to record your own creations.",
+        downloadUrl: "/downloads/edible-candles-my-candle-cards.pdf",
+      },
+    ],
+  },
+};
+const { leadMagnetId } = Astro.props;
+const bonusKey = leadMagnetId
+const bonus = bonuses[bonusKey] ?? bonuses.qr1;
+---
+
+<main class="download-page">
+  <header class="download-topbar">
+    <p>Your kit is ready</p>
+    <h1>Download Your Free Bonus</h1>
+  </header>
+
+  <section class="download-section">
+    <div class="download-inner">
+      <div class="download-image">
+        <img
+          src={edibleCandlesCover}
+          alt="The Edible Candles Cookbook"
+        />
+      </div>
+
+      <div class="download-content">
+        <p class="eyebrow">Here is your free bonus!</p>
+
+        <h2>{bonus.title}</h2>
+
+        <p class="download-description">
+          {bonus.description}
+        </p>
+
+        <ul class="download-list">
+          {
+            bonus.downloads.map((item) => (
+              <li class="download-item">
+                <div>
+                  <h3>{item.name}</h3>
+                  <p>{item.text}</p>
+                </div>
+
+                <a href={item.downloadUrl} class="button download-item-button" download>
+                  Download
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+
+        <div class="download-steps">
+          <div class="download-step">
+            <span>1</span>
+            <div>
+              <h3>Save them somewhere easy to find</h3>
+              <p>Your kitchen, tablet, or recipe folder is perfect.</p>
+            </div>
+          </div>
+
+          <div class="download-step">
+            <span>2</span>
+            <div>
+              <h3>Use them with the cookbook</h3>
+              <p>This kit is designed to complement the recipes and methods in your book.</p>
+            </div>
+          </div>
+
+          <div class="download-step">
+            <span>3</span>
+            <div>
+              <h3>Enjoying the book?</h3>
+              <p>Your review helps more hosts discover the fun of edible candles.</p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href={edibleCandlesReviewUrl}
+          class="review-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Leave a Review
+        </a>
+
+        <p class="privacy">
+          Thank you for being part of the GAHEMA PRESS reader community.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

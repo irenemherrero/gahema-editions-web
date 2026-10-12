@@ -1,0 +1,203 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { edibleCandlesCover, edibleCandlesAmazonUrl } from "../../lib/constants";
+
+import "./styles.css";
+
+const book = {
+  title: "The Edible Candles Cookbook",
+  subtitle:
+    "Light, Dip & Impress Your Guests with 75 Easy Sweet & Savory Butter, Chocolate & Cheese Candle Recipes for Holidays, Parties and Every Gathering",
+  cover: edibleCandlesCover,
+  amazonUrl: edibleCandlesAmazonUrl,
+};
+
+const sections = [
+  { count: 16, name: "Savory Butter Candles" },
+  { count: 12, name: "Sweet Butter Candles" },
+  { count: 14, name: "Chocolate Candles" },
+  { count: 10, name: "Cheese Candles" },
+  { count: 8, name: "Beyond Butter: Olive Oil, Ghee & Coconut" },
+  { count: 15, name: "Holiday & Party Candles" },
+];
+
+const chapters = [
+  "How an Edible Candle Works",
+  "Tools & Ingredients",
+  "The Method",
+  "Food-Safe Wicks & Flame Safety",
+  "Fix-It Guide",
+  "Your First Candle in 30 Minutes",
+  "Create Your Own Candles",
+  "Dairy-Free, Vegan & Allergy Swaps",
+];
+
+const bonuses = [
+  {
+    name: "Hosting Guide & Party Plans",
+    text: "Which candles to make for holidays, game day, and date night, what to serve alongside, and how much to make for your crowd.",
+  },
+  {
+    name: "The Flavor Matrix",
+    text: "Mix and match fats, flavors, and finishing touches to invent your own candles.",
+  },
+  {
+    name: "Table Signs & Gift Tags",
+    text: "A sweet “dip in, but don't eat the wick” sign for the table, and tags for giving candles as gifts.",
+  },
+  {
+    name: "Quick-Start Cheat Sheet",
+    text: "The whole method on one printable page, plus a checklist of everything you need.",
+  },
+  {
+    name: "My Candle Cards",
+    text: "Printable cards to record your own creations, and how they turned out.",
+  },
+];
+
+const gallery = [
+  { src: "/edible-candles/01-garlic-herb.jpg", alt: "Garlic and herb butter candle" },
+  { src: "/edible-candles/29-dark-chocolate-sea-salt.jpg", alt: "Dark chocolate sea salt candle" },
+  { src: "/edible-candles/45-brie-cranberry.jpg", alt: "Brie and cranberry candle" },
+  { src: "/edible-candles/71-birthday-cake.jpg", alt: "Birthday cake candle" },
+];
+---
+
+<Layout>
+  <main class="edible-page">
+    <!-- BOOK -->
+    <section class="feature" aria-labelledby="edible-candles-title">
+      <div class="feature-inner">
+        <div class="feature-cover">
+          <img
+            src={book.cover}
+            alt={`Cover of ${book.title}`}
+            width="600"
+            height="900"
+          />
+        </div>
+
+        <div class="feature-copy">
+          <p class="book-category">Creative Cooking &amp; Entertaining</p>
+          <h1 id="edible-candles-title">{book.title}</h1>
+          <p class="feature-subtitle">{book.subtitle}</p>
+
+          <p class="hook">
+            What if the candle was <span>the appetizer?</span>
+          </p>
+
+          <p>
+            <strong>The Edible Candles Cookbook</strong> shows you how to make
+            candles from <strong>butter, chocolate, and cheese</strong> that you
+            light at the table, blow out, and <strong>dip right into</strong>,
+            even if you've never made one before.
+          </p>
+          <p>
+            Built for <strong>beginners</strong> but full of ideas for seasoned
+            hosts, this book walks you through <strong>every step</strong>:
+            shaping the candle, setting the wick, lighting it safely, and fixing
+            what goes wrong.
+          </p>
+
+          <div class="feature-actions">
+            <a
+              href={book.amazonUrl}
+              class="button button-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get the Book on Amazon
+            </a>
+            <p class="formats">Available in paperback, hardcover, and Kindle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" aria-label="Candles from the book">
+      {
+        gallery.map((img) => (
+          <img src={img.src} alt={img.alt} loading="lazy" width="603" height="900" />
+        ))
+      }
+    </section>
+
+    <!-- RECIPES -->
+    <section class="recipes">
+      <div class="section-heading">
+        <p class="eyebrow">75 Sweet &amp; Savory Recipes</p>
+        <h2>A candle for every table</h2>
+        <p>
+          From garlic and herb butter to salted caramel chocolate and brie
+          filled back into its own rind, plus a candle for every holiday, from
+          Thanksgiving and Christmas to game day and birthdays.
+        </p>
+      </div>
+
+      <ol class="recipe-grid">
+        {
+          sections.map((s) => (
+            <li>
+              <span class="recipe-count">{s.count}</span>
+              <span class="recipe-name">{s.name}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <!-- INSIDE -->
+    <section class="inside">
+      <div class="inside-inner">
+        <div>
+          <p class="eyebrow eyebrow-light">Before the Recipes</p>
+          <h2>Everything you need to make your first candle</h2>
+        </div>
+        <ul class="chapter-list">
+          {chapters.map((c) => <li>{c}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <!-- BONUS -->
+    <section class="bonus">
+      <div class="section-heading">
+        <p class="eyebrow">Free Reader Bonus Kit</p>
+        <h2>A little extra for your table</h2>
+        <p>Scan the code inside the book to download your free bonus kit.</p>
+      </div>
+
+      <div class="bonus-grid">
+        {
+          bonuses.map((b) => (
+            <article class="bonus-card">
+              <h3>{b.name}</h3>
+              <p>{b.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing">
+      <p class="closing-line">
+        Light it. Blow it out. <span>Dip in.</span>
+      </p>
+      <p>
+        Whether you're hosting a holiday dinner or a quiet night with friends,
+        this book gives you a centerpiece people will talk about long after the
+        last dip.
+      </p>
+      <a
+        href={book.amazonUrl}
+        class="button button-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Get the Book on Amazon
+      </a>
+    </section>
+  </main>
+</Layout>

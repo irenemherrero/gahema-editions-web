@@ -1,0 +1,175 @@
+:root {
+    --green-dark: #3a3330;
+    --green: #9a6a2c;
+    --green-soft: #f6efe3;
+    --orange: #9a6a2c;
+    --text: #3a3330;
+    --muted: #6e6560;
+    --bg: #faf6ef;
+    --white: #ffffff;
+  }
+.confirmation-page {
+  min-height: calc(100vh - 56px);
+  background: #faf6ef;
+}
+
+.confirmation-topbar {
+  background: #3a3330;
+  color: white;
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.confirmation-topbar p {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.confirmation-topbar h1 {
+  margin: 6px 0 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.confirmation-section {
+  padding: 72px 24px;
+}
+
+.confirmation-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.confirmation-image {
+  display: flex;
+  justify-content: center;
+}
+
+.confirmation-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+}
+
+.confirmation-content {
+  max-width: 620px;
+}
+
+ .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--orange);
+  }
+
+.confirmation-content h2 {
+  margin: 0 0 18px;
+  text-align: left;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: #3a3330;
+}
+
+.confirmation-content h2 span {
+  color: #3a3330;
+}
+
+.confirmation-description {
+  color: #6e6560;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.confirmation-steps {
+  border-top: 1px solid #ddd;
+  padding-top: 28px;
+  display: grid;
+  gap: 24px;
+}
+
+.confirmation-step {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.confirmation-step span {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: #9a6a2c;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.confirmation-step h3 {
+  margin: 0 0 4px;
+  color: #3a3330;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+}
+
+.confirmation-step p {
+  margin: 0;
+  color: #6e6560;
+  line-height: 1.5;
+}
+
+.confirmation-footer {
+  background: #3a3330;
+  color: white;
+  text-align: center;
+  padding: 18px 24px;
+}
+
+@media (max-width: 820px) {
+  .confirmation-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .confirmation-image img {
+    max-width: 300px;
+  }
+
+  .confirmation-content {
+    margin: 0 auto;
+  }
+
+  .confirmation-content h2 {
+    text-align: center;
+  }
+
+  .confirmation-step {
+    text-align: left;
+  }
+
+  .confirmation-topbar p {
+    font-size: 1.1rem;
+  }
+}
+/* =========================
+   FONDO CREMA (paleta de la portada)
+========================= */
+
+body.bg-gray-100 {
+  background-color: #faf6ef;
+}
